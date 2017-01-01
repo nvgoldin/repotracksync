@@ -244,7 +244,8 @@ def main():
                     continue
 
                 valid_args=('[','name', 'baseurl', 'enabled', 'gpgcheck',
-                            'max_connections', 'exclude')
+                            'max_connections', 'exclude', 'mirrorlist',
+                            'gpgkey', 'metalink')
                 if line.startswith(valid_args):
                     repo_string+=line
             repo_string+= 'includepkgs=%s\n' % ' '.join(packages)
